@@ -39,3 +39,4 @@ if __name__ == '__main__':
     block = Block(1,12,13,11)
     prevhash = block.createHash()
     print(prevhash)
+    print("Rishabh is a tool")
