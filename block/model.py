@@ -25,15 +25,22 @@ def nextBlock(block):
     print((timestamp))
 
     index = block.index
-    data = 1562
+    data = createFingerPrint(12345)
 
     n_block = Block(block.index + 1,
                     block.hash,
                     timestamp,
                     data)
+
     return n_block
 
 
+def createFingerPrint(data):
+
+    # Do data processing
+    fingerPrint = data
+
+    return fingerPrint
 
 if __name__ == '__main__':
     block = Block(1,12,13,11)
