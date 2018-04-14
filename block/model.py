@@ -12,9 +12,9 @@ class Block:
         self.data = data
 
 
-    def createHash(self, block):
+    def createHash(self):
 
-        hashblock = str(block.index) + str(block.data) + str(block.prevHash) + str(block.timestamp)
+        hashblock = str(self.index) + str(self.data) + str(self.prevHash) + str(self.timestamp)
         sha = hashlib.sha256()
         sha.update(hashblock.encode('utf-8'))
         self.hash = sha.hexdigest()
@@ -37,6 +37,6 @@ def nextBlock(block):
 
 if __name__ == '__main__':
     block = Block(1,12,13,11)
-    prevhash = block.createHash()
-    print(prevhash)
+    block.createHash()
+    print(block.hash)
     print("Rishabh is a tool")
